@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>MentorBot</title>
+
+  <!-- CSS  -->
+  <link href="/static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style type="text/css">
+    .front-page-logo{
+     display:inline-block;
+     height:50px;
+     width:auto;
+     margin-top: 0.5%;
+     pointer-events:none
+    }
+    #index-banner {
+      margin-top: 30px;
+    }
+    #login {
+      max-height: 70px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a id="logo-container" href="#" class="brand-logo">
+          <img class="front-page-logo" src="/static/uploads/logo.png">
+        </a>
+        <ul class="right">
+          <li><a href="/faq" class="red-text text-lighten-2">FAQ</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav light-red">
+          <li><a href="/faq" class="red-text text-lighten-2">FAQ</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse red-text text-lighten-2"><i class="mdi-navigation-menu"></i></a>
+      </div>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+    {% block main %}
+
+    {% endblock main %}
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/materialize.js"></script>
+  <script src="/static/js/init.js"></script>
+
+  </body>
+</html>

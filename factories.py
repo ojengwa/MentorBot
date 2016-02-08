@@ -1,4 +1,5 @@
 from flask import Flask
+from flask.ext.sqlalchemy import SQLAlchemy
 
 
 def get_config(dev_env):
@@ -13,7 +14,7 @@ def get_config(dev_env):
     return config_name
 
 
-def init_app(app_name, dev_env):
+def create_app(app_name, dev_env):
     config_name = get_config(dev_env)
 
     app = Flask(app_name,
@@ -25,6 +26,10 @@ def init_app(app_name, dev_env):
                 instance_relative_config=False
                 )
 
+    # Link the global config object
     app.config.from_object(config_name)
+
+    db = SQLAlchemy(app)
+    app.db = db
 
     return app

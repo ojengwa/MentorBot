@@ -1,4 +1,5 @@
-from config import db
+from mentorapp.app import db
+
 
 class Match(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+      <br><br>
+      <h1 class="header center text-lighten-3 materialize-red-text">Mentor Bot</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">...an online fellows-to-fellows mentorship tracking app.</h5>
+      </div>
+      <div class="row center">
+        <a href="{{google.authorization_url()}}" id="download-button" class="waves-effect waves-light">
+          <img src="/static/uploads/login.png" id="login" alt="Login Button">
+        </a>
+      </div>
+{% endblock main %}
